@@ -1,4 +1,5 @@
 import random
+import sys
 
 def find_pi(n):
     points_in_circle = 0
@@ -11,3 +12,10 @@ def find_pi(n):
             points_in_circle += 1
         points_in_total += 1
     return 4*points_in_circle/points_in_total
+
+#This is the new change I'm making in this code
+
+#Now run "python find_py [your_parameter]"
+if __name__ == "__main__":
+    res = find_pi(int(sys.argv[1]))
+    print("Pi value: {}".format(res))
